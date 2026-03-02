@@ -1,6 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-gold-light: #F5E6BE;
+  --color-gold: #D4AF37;
+  --color-gold-dark: #B8860B;
+
+  --color-luxury-black: #0A0A0A;
+  --color-luxury-gold: #C5A059;
+  --color-luxury-cream: #F8F5F0;
+
+  --font-serif: var(--font-serif), serif;
+  --font-sans: var(--font-sans), sans-serif;
+}
 
 :root {
   --background: #0A0A0A;
@@ -32,6 +43,7 @@ h6 {
 .text-gold-gradient {
   background: linear-gradient(135deg, #C5A059 0%, #F5E6BE 50%, #B8860B 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useCart } from "@/components/cart/CartProvider";
+import { useCart, CartItem } from "@/components/cart/CartProvider";
 import { formatPrice } from "@/lib/utils";
 import Image from "next/image";
 import { Trash2 } from "lucide-react";
@@ -26,7 +26,7 @@ export default function CheckoutPage() {
             wilaya: formData.get("wilaya"),
             commune: formData.get("commune"),
             address: formData.get("address"),
-            items: items.map(item => ({
+            items: items.map((item: CartItem) => ({
                 _type: 'object',
                 _key: item.id,
                 product: { _type: 'reference', _ref: item.id },
@@ -80,7 +80,7 @@ export default function CheckoutPage() {
                         <p className="text-foreground/40 italic">Votre panier est vide.</p>
                     ) : (
                         <div className="space-y-6">
-                            {items.map((item) => (
+                            {items.map((item: CartItem) => (
                                 <div key={item.id} className="flex space-x-4 items-center border-b border-luxury-gold/5 pb-6">
                                     <div className="relative w-20 h-24 bg-white/5 flex-shrink-0">
                                         {item.image && <Image src={item.image} alt={item.name} fill className="object-cover" />}
