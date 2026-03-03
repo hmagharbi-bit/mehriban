@@ -1,6 +1,6 @@
 import { defineConfig } from 'sanity';
 import { deskTool } from 'sanity/desk';
-import { schema } from './src/sanity/schema';
+import { schema } from './schema';
 
 export default defineConfig({
     name: 'default',
