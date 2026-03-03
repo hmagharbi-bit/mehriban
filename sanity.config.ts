@@ -5,7 +5,7 @@ import { schema } from './src/sanity/schema';
 export default defineConfig({
     name: 'default',
     title: 'Mehribān STORE',
-    projectId: 'o9mn0wmLF',
+    projectId: '24auu4zh',
     dataset: 'production',
     basePath: '/studio',
     plugins: [deskTool()],
