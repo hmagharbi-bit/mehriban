@@ -11,3 +11,4 @@ export function formatPrice(price: number) {
         currency: "DZD",
     }).format(price);
 }
+// Force update 2026
